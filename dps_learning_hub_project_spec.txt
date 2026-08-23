@@ -1,0 +1,20 @@
+# DPS Interactive Learning Hub - Project Specification
+
+## Project Goals
+Create a central educational hub connecting three interactive mini-applications (Typing, Documents, Excel) with a cohesive, modern DPS-inspired brand.
+
+## Key Modules
+1. **Typing Lab**: Minimalist, Monkeytype-inspired (WPM, Accuracy, Real-time tracking).
+2. **Document Mastery**: 8-lesson interactive formatting tutorial (Page Setup, Fonts, Alignment, Tables, Print Prep).
+3. **Excel Lab**: 8-lesson spreadsheet simulator (Cell references, Formulas, Functions, Charts).
+
+## Brand Identity
+- **Name**: DPS Learning Hub
+- **Colors**: Navy (#002147), Bright Blue (#007AFF), White.
+- **Vibe**: Modern EdTech, Premium Dashboard, Minimalist.
+
+## Technical Scope
+- Multi-page experience using client-side routing logic.
+- LocalStorage for progress tracking.
+- Responsive for Desktop and Mobile.
+- Interactive feedback system (Success/Error states).
