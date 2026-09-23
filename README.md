@@ -192,53 +192,130 @@ The interface adapts navigation, cards, learning activities, and simulators acco
 
 ---
 
-🏗️ Suggested Project Structure
+📁 Project Structure
 
 dps-learning-hub/
 │
-├── index.html
-├── README.md
-├── package.json
+├── 📄 index.html
+├── 📄 README.md
+├── 📄 package.json
+├── 📄 .gitignore
 │
-├── src/
-│   ├── main/
-│   │   ├── router.js
-│   │   ├── storage.js
-│   │   └── app.js
-│   │
-│   ├── components/
-│   │   ├── Navbar/
-│   │   ├── Sidebar/
-│   │   ├── ProgressCard/
-│   │   ├── LessonCard/
-│   │   └── Feedback/
-│   │
-│   ├── pages/
-│   │   ├── Dashboard/
-│   │   ├── TypingLab/
-│   │   ├── DocumentMastery/
-│   │   └── ExcelLab/
-│   │
-│   ├── lessons/
-│   │   ├── documents/
-│   │   └── excel/
-│   │
-│   ├── styles/
-│   │   ├── global.css
-│   │   ├── dashboard.css
-│   │   ├── typing.css
-│   │   ├── documents.css
-│   │   └── excel.css
-│   │
-│   └── assets/
-│       ├── images/
-│       └── icons/
+├── 📁 public/
+│   ├── 📁 images/
+│   └── 📁 icons/
 │
-└── public/
+└── 📁 src/
+    │
+    ├── 📁 assets/
+    │   ├── 📁 images/
+    │   └── 📁 icons/
+    │
+    ├── 📁 components/
+    │   ├── 📁 Navbar/
+    │   ├── 📁 Sidebar/
+    │   ├── 📁 ProgressCard/
+    │   ├── 📁 LessonCard/
+    │   └── 📁 Feedback/
+    │
+    ├── 📁 pages/
+    │   ├── 📁 Dashboard/
+    │   ├── 📁 TypingLab/
+    │   ├── 📁 DocumentMastery/
+    │   └── 📁 ExcelLab/
+    │
+    ├── 📁 lessons/
+    │   ├── 📁 documents/
+    │   │   ├── lesson-01/
+    │   │   ├── lesson-02/
+    │   │   ├── lesson-03/
+    │   │   ├── lesson-04/
+    │   │   ├── lesson-05/
+    │   │   ├── lesson-06/
+    │   │   ├── lesson-07/
+    │   │   └── lesson-08/
+    │   │
+    │   └── 📁 excel/
+    │       ├── lesson-01/
+    │       ├── lesson-02/
+    │       ├── lesson-03/
+    │       ├── lesson-04/
+    │       ├── lesson-05/
+    │       ├── lesson-06/
+    │       ├── lesson-07/
+    │       └── lesson-08/
+    │
+    ├── 📁 styles/
+    │   ├── global.css
+    │   ├── dashboard.css
+    │   ├── typing.css
+    │   ├── documents.css
+    │   └── excel.css
+    │
+    ├── 📄 app.js
+    ├── 📄 router.js
+    └── 📄 storage.js
 
-«The exact structure can be adapted depending on whether the project uses vanilla JavaScript, React, or another frontend framework.»
+📌 Directory Overview
 
----
+Directory / File| Purpose
+"public/"| Static files served directly by the application
+"src/assets/"| Images, icons, and other application assets
+"src/components/"| Reusable UI components
+"src/pages/"| Main application pages/modules
+"src/pages/Dashboard/"| Main DPS Learning Hub dashboard
+"src/pages/TypingLab/"| Typing practice environment
+"src/pages/DocumentMastery/"| Interactive document-formatting lessons
+"src/pages/ExcelLab/"| Interactive spreadsheet lessons
+"src/lessons/documents/"| 8 Document Mastery lessons
+"src/lessons/excel/"| 8 Excel Lab lessons
+"src/styles/"| Global and module-specific styling
+"router.js"| Client-side page navigation/routing
+"storage.js"| LocalStorage-based progress management
+"app.js"| Application initialization and core logic
+"index.html"| Main HTML entry point
+
+🧩 Module Architecture
+
+                    ┌─────────────────────┐
+                    │  DPS Learning Hub   │
+                    │      Dashboard      │
+                    └──────────┬──────────┘
+                               │
+              ┌────────────────┼────────────────┐
+              │                │                │
+              ▼                ▼                ▼
+       ┌─────────────┐  ┌──────────────┐  ┌─────────────┐
+       │ Typing Lab  │  │   Document   │  │  Excel Lab  │
+       │             │  │   Mastery    │  │             │
+       └──────┬──────┘  └──────┬───────┘  └──────┬──────┘
+              │                │                 │
+              ▼                ▼                 ▼
+        Practice &       8 Interactive      8 Interactive
+        Performance         Lessons             Lessons
+              │                │                 │
+              └────────────────┼─────────────────┘
+                               ▼
+                     ┌──────────────────┐
+                     │ Progress Storage │
+                     │   LocalStorage   │
+                     └──────────────────┘
+
+🔄 Application Flow
+
+User
+ │
+ ▼
+Dashboard
+ │
+ ├──► Typing Lab
+ │       └──► Practice → Results → Progress
+ │
+ ├──► Document Mastery
+ │       └──► Lesson → Activity → Feedback → Progress
+ │
+ └──► Excel Lab
+         └──► Lesson → Simulation → Feedback → Progress
 
 🛠️ Technology Scope
 
